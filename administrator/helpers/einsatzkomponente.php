@@ -922,7 +922,7 @@ endif;
 			. '</div>';
 	}
 	
-    public function articlk2e($cid) {
+    public function articlek2($cid) {
 	// Check for request forgeries
 	JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));
 	// Get items to remove from the request.
@@ -976,7 +976,7 @@ endif;
 			$intro = preg_replace("#(?<=.{".$params->get('article_max_intro','400')."}?\\b)(.*)#is", " ...", $intro, 1);
 			$query->set('`introtext`="'.$db->escape($intro).'"');
 		
-			if ($params->get('article_orgas','1')) :	
+			if ($params->get('articlek2_orgas','1')) :	
 				$data = array();
 				foreach(explode(',',$result[0]->auswahl_orga) as $value):
 					$db = JFactory::getDbo();
@@ -999,7 +999,7 @@ endif;
 			endif;
 		
 			$query->set('`published`="1"');
-			$query->set('`catid`="'.$params->get('article_category','0').'"');
+			$query->set('`catid`="'.$params->get('articlek2_category','0').'"');
 			//$query->set('`catid`="2"');
 			$query->set('`created`="'.date("Y-m-d H:i:s", strtotime($result[0]->date1)).'"');
 			$query->set('`created_by`="'.$user->id.'"');
@@ -1015,8 +1015,8 @@ endif;
 			$query->set('`attribs`="{\"show_title\":"",\"link_titles\":"",\"show_tags\":"",\"show_intro\":"",\"info_block_position\":"",\"show_category\":"",\"link_category\":"",\"show_parent_category\":"",\"link_parent_category\":"",\"show_author\":"",\"link_author\":"",\"show_create_date\":"",\"show_modify_date\":"",\"show_publish_date\":"",\"show_item_navigation\":"",\"show_icons\":"",\"show_print_icon\":"",\"show_email_icon\":"",\"show_vote\":"",\"show_hits\":"",\"show_noauth\":"",\"urls_position\":"",\"alternative_readmore\":"",\"article_layout\":"",\"show_publishing_options\":"",\"show_article_options\":"",\"show_urls_images_backend\":"",\"show_urls_images_frontend\":""}"');
 			//$query->set('`version`="1"');
 			$query->set('`ordering`="0"');
-			$query->set('`metakey`="'.$auswahl_orga.','.$params->get('article_meta_key','feuerwehr,einsatzbericht,unfall,feuer,hilfeleistung,polizei,thw,rettungsdienst,hilfsorganisation').',einsatzkomponente"');
-			$query->set('`metadesc`="'.$params->get('article_meta_desc','Einsatzbericht').'"');
+			$query->set('`metakey`="'.$auswahl_orga.','.$params->get('articlek2_meta_key','feuerwehr,einsatzbericht,unfall,feuer,hilfeleistung,polizei,thw,rettungsdienst,hilfsorganisation').',einsatzkomponente"');
+			$query->set('`metadesc`="'.$params->get('articlek2_meta_desc','Einsatzbericht').'"');
 			$query->set('`access`="1"');
 			$query->set('`hits`="0"');
 			$query->set('`metadata`="{\"robots\":\"\",\"author\":\"'.$user->username.'\",\"rights\":\"\",\"xreference\":\"\"}"');
