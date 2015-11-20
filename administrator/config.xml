@@ -1534,6 +1534,81 @@
 />
 		
 	</fieldset>
+<fieldset name="k2_article" label="K2-Artikel" description="">
+	
+	<field name="note_k2_article" 
+		type="note" 
+		class="alert alert-info" 
+		label="Einstellungen für den Export als Joomla-Artikel" 
+		description="Hier können Sie diverse Einstellungen für den Export der Einsatzberichte als K2-Artikel vornehmen." 
+/>
+		
+	  <field name="articlek2_category" 
+	  		type="category" 
+			label="K2-Kategorie :" 
+			default = "0"
+			extension ="com_k2"
+			description="Eine K2-Kategorie auswählen, in der die Einsatzberichte exportiert werden sollen." 
+			/>
+
+	  <field
+			name="articlek2_frontpage"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="als Haupteintrag :"
+			description="Hier können Sie einstellen, ob der Artikel als Haupteintrag angezeigt werden soll.">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+	  </field>
+	  
+	  <field
+			name="articlek2_orgas"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="Eingesetzte Kräfte :"
+			description="Hier können Sie einstellen, ob die eingesetzten Kräfte unter dem Artikel angezeigt werden sollen.">
+			<option
+				value="0">nicht anzeigen</option>
+			<option
+				value="1">anzeigen</option>
+	  </field>
+	  
+			<field name="articlek2_max_intro" 
+			type="text" 
+			default="400" 
+			label="max. Zeichen Introtext :" 
+			description="" 
+			/>
+			
+	  
+		<field name="articlek2_meta_key" 
+				type="textarea" 
+				filter="raw" 
+				default="feuerwehr,einsatzbericht,unfall,feuer,hilfeleistung,polizei,thw,rettungsdienst,hilfsorganisation" 
+				label="Meta-Schlüsselwörter" 
+				description="Eine durch Kommas getrennte Liste von Schlüsselwörtern, die mit dem HTML-Code ausgegeben wird." 
+				rows="10" cols="40" />
+				
+		<field name="articlek2_meta_desc" 
+				type="textarea" 
+				filter="raw" 
+				default="Einsatzbericht" 
+				label="Meta-Beschreibung" 
+				description="Eine zusätzliche Beschreibung, die mit dem HTML-Code ausgegeben wird. Sie wird im Allgemeinen in den Ergebnissen von Suchmaschinen angezeigt." 
+				rows="10" cols="40" />
+				
+	<field name="note_k2_article_info" 
+		type="note" 
+		class="alert alert-warning" 
+		label="Bitte beachten :" 
+		description="Weitere Einstellungen können Sie anschließend direkt im K2-Artikel vornehmen, bzw. über die Kategorie und/oder Menüpunkten festlegen." 
+/>
+		
+</fieldset>
 	
 	
 	
@@ -1821,7 +1896,8 @@
 			Ja
 		</option>
 	</field>
-</fieldset>	
+</fieldset>
+
 <!--ACL-->
 	<fieldset name="permissions"
 		description="JCONFIG_PERMISSIONS_DESC"
