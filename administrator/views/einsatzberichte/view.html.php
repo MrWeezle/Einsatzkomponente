@@ -97,7 +97,8 @@ class EinsatzkomponenteViewEinsatzberichte extends JViewLegacy {
 		$version = new JVersion;
 		if ($version->isCompatible('3.0')) :
 		if ($canDo->get('core.create')) {
-				JToolBarHelper::custom( 'einsatzberichte.article', 'edit','edit', 'Als Artikel erstellen',  true );
+			JToolBarHelper::custom( 'einsatzberichte.article', 'edit','edit', 'Als Artikel erstellen',  true );
+			JToolBarHelper::custom( 'einsatzberichte.articlek2', 'edit','edit', 'Als K2- Artikel erstellen',  true );
 		}
 		JToolBarHelper::custom( 'einsatzberichte.pdf', 'upload','upload', 'Als PDF exportieren',  true );
         endif;
