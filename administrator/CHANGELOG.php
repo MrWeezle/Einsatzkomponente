@@ -1,5 +1,12 @@
 <?php defined('_JEXEC') or die(); ?>
 <h1>Einsatzkomponente für das Joomla-CMS</h1>
+
+<h3>Changelog <small>Version 3.14</small></h3>
+<ul>
+# eingesetzte Fahrzeuge als Textaufzählung in detail_layout_4 korrigiert
++ Detailbutton in Einsatzübersicht main_layout_4 hinzugefügt
+</ul>
+
 <h3>Changelog <small>Version 3.13</small></h3>
 <ul>
 + Einsatzkarte in Übersicht -Einsatzarchiv- hinzugefügt.
